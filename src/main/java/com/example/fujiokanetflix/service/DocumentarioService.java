@@ -2,6 +2,7 @@ package com.example.fujiokanetflix.service;
 
 import com.example.fujiokanetflix.model.Documentario;
 import com.example.fujiokanetflix.model.Filme;
+import com.example.fujiokanetflix.model.Genero;
 import com.example.fujiokanetflix.repository.DocumentarioRepository;
 import jakarta.ws.rs.NotFoundException;
 import lombok.extern.slf4j.Slf4j;
@@ -43,5 +44,11 @@ public class DocumentarioService {
             return false;
         }
         return true;
+    }
+
+    public Documentario consultarPorId(Integer id){
+        return repository
+                .findById(id)
+                .orElseThrow(NotFoundException::new);
     }
 }
