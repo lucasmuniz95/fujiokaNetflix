@@ -1,13 +1,12 @@
 package com.example.fujiokanetflix.service;
 
+import com.example.fujiokanetflix.service.DocumentarioService;
 import com.example.fujiokanetflix.model.Documentario;
-import com.example.fujiokanetflix.model.Filme;
-import com.example.fujiokanetflix.model.Genero;
 import com.example.fujiokanetflix.repository.DocumentarioRepository;
 import jakarta.ws.rs.NotFoundException;
 import lombok.extern.slf4j.Slf4j;
-import org.jvnet.hk2.annotations.Service;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Objects;
@@ -17,7 +16,7 @@ import java.util.Objects;
 public class DocumentarioService {
 
     @Autowired
-    public DocumentarioRepository repository;
+    private DocumentarioRepository repository;
 
     public Documentario salvar(Documentario doc) {
         return repository.save(doc);
