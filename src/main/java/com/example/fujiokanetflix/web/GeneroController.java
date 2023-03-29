@@ -24,7 +24,7 @@ public class GeneroController {
     }
 
     @PutMapping
-    public ResponseEntity<Genero> alterar(@RequestBody Genero genero) {
+    public ResponseEntity<Genero> update(@RequestBody Genero genero) {
         genero = service.alterar(genero);
         return ResponseEntity.ok(genero);
     }
