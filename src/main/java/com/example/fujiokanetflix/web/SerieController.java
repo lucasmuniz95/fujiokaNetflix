@@ -1,6 +1,6 @@
 package com.example.fujiokanetflix.web;
 
-import com.example.fujiokanetflix.model.Genero;
+
 import com.example.fujiokanetflix.model.Serie;
 import com.example.fujiokanetflix.service.SerieService;
 import org.springframework.beans.factory.annotation.Autowired;

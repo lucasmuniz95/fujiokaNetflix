@@ -16,4 +16,8 @@ public class Serie {
     private String titulo;
     @Column(length = 500)
     private String sinopse;
+
+    @ManyToOne
+    @JoinColumn(name = "serie_id")
+    private Serie serie;
 }
